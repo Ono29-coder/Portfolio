@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/opus.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <link rel="stylesheet" href="./css/hover.css">
+    <script defer src="./js/opus.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <h1 class="title">作品集</h1>
+
+        <div class="opus">
+            <h2 id ="game" class="title">風船割りゲーム</h2>
+
+            <div class="flexbox">
+                <div class="imgs">
+                    <!-- 小さい画像 -->
+                    <div class="s-imgs">
+                        <div>
+                            <img src="./img/g-1.png" alt="画像1" onclick="showImage(this.src)">
+                        </div>
+                        <div>
+                            <img src="./img/g-2.png" alt="画像2" onclick="showImage(this.src)">
+                        </div>
+                        <div>
+                            <img src="./img/g-3.gif" alt="画像3" onclick="showImage(this.src)">
+                        </div>
+                    </div>
+
+                    <!-- 大きい画像 -->
+                    <div class="l-img">
+                        <img src="" id="preview" alt="プレビュー画像">
+                    </div>
+                </div>
+
+
+                    
+                    <!--文書-->
+                    <div class="text">
+                        <p>
+                            Unityを使用して、初めてブロック崩しゲームを開発しました。このゲームは、プレイヤーが爆弾を避けながら風船を全て割ることを目指す内容で、シンプルながらもスリルを味わえるゲームデザインにしました。PC版のみ対応で、Unityroomで公開しています。開発中は、難易度の調整が非常に難しく、デバッグがしにくいと感じました。そのため、開発者がゲームの挙動を確認しやすいように「デベロッパーモード」を実装するべきだったと反省しています。初心者としての挑戦でしたが、多くのことを学べた貴重な経験となりました。
+                        </p>
+
+                        <P>
+                            使用言語
+                            <br>C#
+                        </P>
+                        
+                        <!--gitなどのアイコンボタン-->
+                        <div class="bt-icon">
+                            <a href="#">
+                                <img src="./img/git.png" alt="Git Logo" width="40px">
+                                <span class="speech-bubble">Git リンク</span>
+                            </a>
+                            <a href="#">
+                                <img src="./img/playGame.png" alt="Play Game Logo" width="40px">
+                                <span class="speech-bubble">ゲームをプレイ</span>
+                            </a>      
+                        </div>
+                    </div>     
+                    </div>
+            </div>
+        </div>
+</body>
+</html>

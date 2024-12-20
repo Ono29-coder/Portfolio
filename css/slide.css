@@ -1,0 +1,122 @@
+.slide-wrapper,ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide-wrapper, li {
+    list-style: none;
+  }
+  
+  /* スライドの外枠 */
+  .slide-wrapper {
+    width: 800px;
+    height: 500px;    
+    margin: auto;
+    margin-bottom: 100px;   
+    position: relative;/*要素の現在位置を基準に配置*/
+    overflow: hidden; /* はみ出したスライドを隠す */
+  }
+  /*スライド全体 */
+  .slide { 
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: all 0.3s;/*スライドする速度*/
+  }
+  .slide div { /* スライドの中*/
+    width: 33.33%;/*一枚当たりの幅*/
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;/*flex時、子要素を中央に揃える*/
+    flex-direction: column; /* 子要素を縦方向に並べる */
+  }
+
+  .slide div img {
+    margin-bottom: 10px; /* 画像とテキスト間の余白 */
+    width: 100%;
+}
+
+  .slide1 { /* スライド１枚目 */
+    transform: translateX(0);
+  }
+  .slide2 { /* スライド２枚目（1/3移動）*/
+    transform: translateX(-33.33%);
+  }
+  .slide3 { /* スライド３枚目　2/3移動*/
+    transform: translateX(-66.66%);
+  }
+  .slide div:nth-of-type(1){ /* 背景色 */
+    background-color: #dfe9ef;
+  }
+  .slide div:nth-of-type(2){ /* 背景色 */
+    background-color: #dfe9ef;
+  }
+  .slide div:nth-of-type(3){ /* 背景色 */
+    background-color: #dfe9ef;
+  }
+
+  /* 右ボタン */
+  .next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+
+     /*>部分描画*/
+    border-top: solid 3px #000;/*実線　太さ　色*/
+    border-right: solid 3px #000;
+    /*４５度回転させる*/
+    -webkit-transform: rotate(45deg) translateY(50%);
+    transform: rotate(45deg) translateY(50%);
+  }
+
+   /* 左ボタン */
+  .prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+
+     /*>部分描画*/
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(-135deg) translateY(-50%);
+  }
+
+  /*インジケーター */
+  .indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    column-gap: 18px;/*・の間隔*/
+    z-index: 10;
+    justify-content: center;/*フレックスボックスの子要素を中央揃え*/
+    align-items: center;
+  }
+
+  /*・の部分*/
+  .indicator li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+  }
+
+  /*一番目の・*/
+  .indicator li:first-of-type {
+    background-color: #000;
+  }

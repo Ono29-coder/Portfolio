@@ -1,0 +1,34 @@
+.bt-icon a {
+    position: relative; /* 親要素を基準に子要素を配置 */
+    display: inline-block; /* 吹き出しが各画像と関連付けられるようにする */
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 60px; /* 吹き出しが画像の上に表示される位置 */
+    left: 50%;
+    transform: translateX(-50%); /* 自分自身の幅の50%だけ左に移動 */
+    padding: 6px 10px;
+    background: #01579B;
+    color: #FFF;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+    opacity: 0;
+    white-space: nowrap; /* 長いテキストを1行に収める */
+}
+
+/*下三角形部分*/
+.speech-bubble:after {
+    content: "";/*空文字列を指定し、装飾だけを作成*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top: 8px solid #01579B;
+}
+
+a:hover .speech-bubble {
+    opacity: 1; /* ホバー時に吹き出しを表示 */
+}

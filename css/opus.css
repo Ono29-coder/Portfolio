@@ -1,0 +1,98 @@
+.opus {
+    border: 2px solid black; /* 枠線の幅を 3px に調整 */
+    border-radius: 20px;
+    background-color: #FFF;    /* 背景色は維持 */
+    width: 90%;                /* 幅を調整して小さく見せる */
+    margin: 0 auto;            /* 中央寄せ */
+    margin-top: 10px;
+    padding: 10px;             /* 内側の余白を適度に調整 */
+    box-sizing: border-box;    /* 枠線を含めたサイズ計算 */
+}
+
+
+.title{
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column; /* 初期は縦並び */
+    align-items: center; /* コンテンツを中央揃え */
+    justify-content:center;
+    height: 100p;
+}
+
+.imgs {
+    width: 100%; /* 全体の基準幅を設定 */
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.l-img {
+    text-align: center;
+    margin-top: 20px; /* 上部に少し余白を追加 */
+}
+
+.l-img img {
+    width: 80%; /* 画像の横幅を指定 */
+    max-width: calc(30% * 3); /* s-imgsと揃えるため調整 */
+}
+
+.s-imgs {
+    display: flex;
+    justify-content: space-between; /* 均等に並べる */
+    height: auto; /* アスペクト比を維持 */
+    width: 60%; /* l-imgと揃える */
+    max-width: calc(30% * 3); /* l-imgの最大幅と揃える */
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.s-imgs > div {
+    width: 30%; /* 各要素の幅を30%に設定 */
+    text-align: center; /* 画像を中央揃え */
+    background: #FFF;
+}
+
+.s-imgs img {
+    width: 100%; /* 各要素に収まるよう画像の幅を調整 */
+    height: auto; /* アスペクト比を維持 */
+}
+
+
+.bt-icon {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.text{
+    margin: 10px auto;
+    width:60%;
+}
+
+
+@media screen and (min-width: 800px) {
+    .flexbox {
+        flex-direction: row; /* 横並び */
+        justify-content: space-between; /* 均等に配置 */
+    }
+
+    .imgs, .text {
+        width: 60%; /* 両方を均等に配置 */
+    }
+
+    .imgs{
+        margin-bottom: 20vh;/* 高さ調整 */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .imgs, .text {
+        width: 80%; /* 両方を均等に配置 */
+    }
+
+    .imgs{
+        margin-bottom: 0vh;/* 高さ調整 */
+    }
+ }

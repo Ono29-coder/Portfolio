@@ -1,0 +1,35 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e4f5fb;
+  display: flex; /* Flexboxを利用 */
+  justify-content: center; /* 横方向に中央配置 */
+  align-items: center; /* 縦方向に中央配置 */
+}
+
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(#43bce4,#0065d4);
+}
+
+@keyframes rise {
+  0% { height: 0; }
+  100% { height: 100%; } 
+}
+
+/* アニメーションをクラスで指定 */
+.animate {
+  animation: rise 5s forwards;
+}
