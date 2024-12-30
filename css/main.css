@@ -1,0 +1,17 @@
+/*サイドバー　選択ホバー処理*/
+/* 初期状態で非表示に */
+.hover-svg {
+    opacity: 0;
+    visibility: hidden;
+    /*ease 開始と終了時に動きがゆっくり、中間部分で速くなる*/
+    /*visibility 要素が表示されるかどうか*/
+    /*linear一定速度で変化*/
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+/* ホバー時に表示 */
+.list-group-item:hover .hover-svg {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
