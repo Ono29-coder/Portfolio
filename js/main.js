@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const waterElement = document.querySelector('.water');
-  
-  // .animate クラスを追加してアニメーションを発動
-  waterElement.classList.add('animate');
-});
-
-
   const modalButton = document.querySelector('.js-modal-button');
   const modalContainer = document.getElementById('modal-container');
   
@@ -34,9 +26,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (error) {
       console.error(error);
     }
-  };
-  
-  // ページロード時にモーダルを読み込む
-  document.addEventListener('DOMContentLoaded', loadModal);
-  
+  };  
 
