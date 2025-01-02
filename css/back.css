@@ -1,9 +1,0 @@
-body {
-  position: fixed;
-  background-color: #e4f5fb;
-  z-index: -1;
-  /*円の開始色、縦、終了色、横
-  background-image: radial-gradient(#00a3d9 3px, #dfe9ef 3px);
-  background-size: 20px 20px;
-  */
-}
