@@ -13,6 +13,6 @@ function showImage2(src) {
 window.onload = function () {
     showImage1('./img/game-3.gif');
 
-    showImage2('./img/game-3.gif');
+    showImage2('./img/portfolio1.png');
 
 };
